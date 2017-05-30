@@ -30,6 +30,8 @@ class Message extends BaseMessage {
     private $_textBody;
 
     private $_htmlBody;
+   
+    private $_options = [];
 
     /**
      * @inheritdoc
@@ -174,6 +176,21 @@ class Message extends BaseMessage {
     */
     public function setHtmlBody($html) {
         $this->_htmlBody = $html;
+        return $this;
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function getOptions() {
+        return $this->_options;
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function setOptions($options) {
+        $this->_options = $options;
         return $this;
     }
 
